@@ -19,7 +19,7 @@ class ShoeAdapter(
     inner class ShoeViewHolder(private val binding: ItemRowShoeBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(shoe: Shoe) {
             binding.tvItemName.text = shoe.name
-            binding.tvItemBrand.text = shoe.brand
+//            binding.tvItemBrand.text = shoe.brand
             binding.tvItemPrice.text = shoe.price
 
             binding.imgItemPhoto.load(shoe.photoUrl) {

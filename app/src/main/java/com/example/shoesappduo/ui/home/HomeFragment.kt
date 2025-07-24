@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.shoesappduo.databinding.FragmentHomeBinding
 import com.example.shoesappduo.ui.adapter.ShoeAdapter
@@ -37,7 +38,8 @@ class HomeFragment : Fragment() {
 
         // Setup RecyclerView
         binding.rvShoes.apply {
-            layoutManager = LinearLayoutManager(context)
+            // --- UBAH BARIS INI ---
+            layoutManager = GridLayoutManager(context, 2) // Mengubah menjadi 2 kolom grid
             adapter = shoeAdapter
         }
 
