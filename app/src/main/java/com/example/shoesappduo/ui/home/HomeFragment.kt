@@ -13,7 +13,6 @@ import com.example.shoesappduo.ui.adapter.ShoeAdapter
 
 class HomeFragment : Fragment() {
 
-    // Gunakan by viewModels() untuk mengambil instance HomeViewModel
     private val viewModel: HomeViewModel by viewModels()
 
     // Setup View Binding
@@ -42,16 +41,13 @@ class HomeFragment : Fragment() {
             adapter = shoeAdapter
         }
 
-        // Amati perubahan data 'shoes' dari ViewModel
         viewModel.shoes.observe(viewLifecycleOwner) { shoesList ->
-            // Kirim list baru ke adapter. ListAdapter akan menanganinya secara efisien.
             shoeAdapter.submitList(shoesList)
         }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        // Hindari memory leak dengan membersihkan binding
         _binding = null
     }
 }
