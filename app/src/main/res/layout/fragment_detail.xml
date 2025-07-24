@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.DetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_detail_photo"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/tv_detail_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_detail_photo"
+            tools:text="Nama Sepatu Super Keren" />
+
+        <TextView
+            android:id="@+id/tv_detail_brand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_detail_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_detail_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_detail_name"
+            tools:text="Merek Terkenal" />
+
+        <TextView
+            android:id="@+id/tv_detail_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/tv_detail_brand"
+            app:layout_constraintStart_toStartOf="@+id/tv_detail_brand"
+            app:layout_constraintTop_toBottomOf="@+id/tv_detail_brand"
+            tools:text="Rp 2.500.000" />
+
+        <TextView
+            android:id="@+id/tv_detail_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:lineSpacingMultiplier="1.2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_detail_price"
+            app:layout_constraintStart_toStartOf="@+id/tv_detail_price"
+            app:layout_constraintTop_toBottomOf="@+id/tv_detail_price"
+            tools:text="Ini adalah deskripsi panjang tentang betapa hebatnya sepatu ini. Dibuat dengan bahan berkualitas tinggi dan teknologi canggih untuk kenyamanan maksimal saat berlari, berjalan, atau bergaya." />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
