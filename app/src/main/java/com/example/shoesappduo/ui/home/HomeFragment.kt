@@ -16,7 +16,6 @@ class HomeFragment : Fragment() {
 
     private val viewModel: HomeViewModel by viewModels()
 
-    // Setup View Binding
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
