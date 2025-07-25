@@ -16,7 +16,6 @@ class HomeViewModel : ViewModel() {
     }
 
     private fun loadShoes() {
-        // Mengambil data dari datasource dan mengirimkannya ke LiveData
         _shoes.value = DummyShoeDataSource.getShoesData()
     }
 }
