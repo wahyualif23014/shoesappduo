@@ -8,7 +8,6 @@ import com.example.shoesappduo.data.model.Shoe
 
 class HomeViewModel : ViewModel() {
 
-    // _shoes adalah LiveData internal yang bisa diubah isinya (Mutable)
     private val _shoes = MutableLiveData<List<Shoe>>()
     // shoes adalah LiveData eksternal yang hanya bisa dibaca (read-only) oleh Fragment
     val shoes: LiveData<List<Shoe>> get() = _shoes
