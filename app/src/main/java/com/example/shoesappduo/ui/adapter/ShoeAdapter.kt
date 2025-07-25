@@ -10,12 +10,10 @@ import com.example.shoesappduo.R
 import com.example.shoesappduo.data.model.Shoe
 import com.example.shoesappduo.databinding.ItemRowShoeBinding
 
-// Mengganti RecyclerView.Adapter menjadi ListAdapter
 class ShoeAdapter(
     private val onItemClick: (Shoe) -> Unit
 ) : ListAdapter<Shoe, ShoeAdapter.ShoeViewHolder>(ShoeDiffCallback()) {
 
-    // ViewHolder tidak berubah
     inner class ShoeViewHolder(private val binding: ItemRowShoeBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(shoe: Shoe) {
             binding.tvItemName.text = shoe.name
