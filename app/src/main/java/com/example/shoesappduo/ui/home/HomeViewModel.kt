@@ -9,11 +9,9 @@ import com.example.shoesappduo.data.model.Shoe
 class HomeViewModel : ViewModel() {
 
     private val _shoes = MutableLiveData<List<Shoe>>()
-    // shoes adalah LiveData eksternal yang hanya bisa dibaca (read-only) oleh Fragment
     val shoes: LiveData<List<Shoe>> get() = _shoes
 
     init {
-        // Langsung muat data sepatu saat ViewModel ini pertama kali dibuat
         loadShoes()
     }
 
