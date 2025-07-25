@@ -38,7 +38,6 @@ class ShoeAdapter(
         return ShoeViewHolder(binding)
     }
 
-    // Menggunakan getItem() dari ListAdapter untuk mendapatkan data
     override fun onBindViewHolder(holder: ShoeViewHolder, position: Int) {
         val shoe = getItem(position)
         holder.bind(shoe)
