@@ -39,7 +39,7 @@ class HomeFragment : Fragment() {
         // Setup RecyclerView
         binding.rvShoes.apply {
             // --- UBAH BARIS INI ---
-            layoutManager = GridLayoutManager(context, 2) // Mengubah menjadi 2 kolom grid
+            layoutManager = GridLayoutManager(context, 2)
             adapter = shoeAdapter
         }
 
